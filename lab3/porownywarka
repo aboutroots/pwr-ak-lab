@@ -1,0 +1,32 @@
+#!/bin/bash
+wynik="$(cmp -l $1 $2)"
+echo "$wynik" > temporary.txt
+
+pierwszalinia="$( head -n1 temporary.txt)"
+echo "$pierwszalinia" > temporary.txt
+
+poczatek="$(cut -f 2 -d ' ' temporary.txt)"
+if [ -z "$poczatek" ];
+then
+	poczatek="$(cut -f 1 -d ' ' temporary.txt)"
+fi
+
+echo "$wynik" > temporary.txt
+ostatnialinia="$( tail -q -n1 temporary.txt)"
+echo "$ostatnialinia" > temporary.txt
+
+koniec="$(cut -f 2 -d ' ' temporary.txt)"
+if [ -z "$koniec" ];
+then
+koniec="$(cut -f 1 -d ' ' temporary.txt)"
+fi
+
+odleglosc=$(( $koniec - $poczatek ))
+offset=$((odleglosc + 32))
+
+rm temporary.txt
+echo "Zestawienie roznic miedzy plikami."
+echo "Adres poczatku: $poczatek"
+echo "Adres konca: $koniec"
+echo "Bledny zakres w bajtach: $odleglosc"
+colordiff -y <(xxd -u -s +$poczatek -l $offset $1) <(xxd -u -s +$poczatek -l $offset $2)
