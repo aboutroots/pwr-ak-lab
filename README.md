@@ -1,5 +1,8 @@
+## POMOGŁO W NAUCE?? DAJ GWIAZDKĘ DLA TEGO REPOZYTORIUM :) #
+jeśli nie masz konta, to je załóż. to prawdopodobnie najlepsza rzecz jaką zrobisz na pwr
 # Laboratorium z Architektury Komputerów
 ## Opis programów
+uwaga - programy MOGĄ zawierać błędy! używaj z głową
 
 ### helloworld
 hello world z poziomu assemblera.
