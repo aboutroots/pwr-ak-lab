@@ -1,6 +1,5 @@
-## POMOGŁO W NAUCE?? DAJ GWIAZDKĘ DLA TEGO REPOZYTORIUM :) #
-jeśli nie masz konta, to je załóż. to prawdopodobnie najlepsza rzecz jaką zrobisz na pwr
 # Laboratorium z Architektury Komputerów
+![meme](http://www.quickmeme.com/img/f0/f0b6516e4b8d1282290d9ac55e5b956f6e6143ceaf2d1cf628d34df4487c2866.jpg)
 ## Opis programów
 uwaga - programy MOGĄ zawierać błędy! używaj z głową
 
